@@ -1,0 +1,22 @@
+.header {
+   display:grid;
+   grid-template-columns: repeat(7, 1fr);
+   grid-template-rows: repeat(3, 40px);
+   border: 2px solid black;
+   border-bottom: 3px solid gray;
+   background-color: black;
+
+}
+
+.missile-grid {
+    display:grid;
+    grid-template-columns: 10px 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 3px solid red;
+    background-color: green;
+}
+
+.station-text {
+    color: white;
+    border: 1px solid white;
+}
