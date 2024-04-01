@@ -1,52 +1,67 @@
-import Station from './components/Station';
+import Station from './components/Station/Station';
 
 const App = () => {
   return (
     <div className='container'>
       <div className='header'>
-        <div className='station-text'>
-          <div>Station 1</div>
-          <div></div>
+        <div id='Station 1' className='station-grid'>
+          <Station name={'Station 1'} />
         </div>
-        <div className='station-text'>
-          <div>Station 2</div>
-          <div></div>
+        <div id='Station 2' className='station-grid'>
+          <Station
+            weapon1={'R-2'}
+            weapon2={'R-9E'}
+            isSelected={true}
+            name={'Station 2'}
+          />
         </div>
-        <div className='station-text'>
-          <div>Station 3</div>
-          <div></div>
+        <div id='Station 3' className='station-grid'>
+          <Station weapon1={'GBU12'} isSelected={false} name={'Station 3'} />
         </div>
-        <div className='station-text'>
-          <div>Station 5</div>
-          <div></div>
+        <div id='Station 5' className='station-grid'>
+          <Station weapon1={'GBU38'} isSelected={false} name={'Station 5'} />
         </div>
-        <div className='station-text'>
-          <div>Station 6</div>
-          <div></div>
+        <div id='Station 6' className='station-grid'>
+          <Station
+            weapon1={'R-2'}
+            weapon2={'R-9E'}
+            isSelected={true}
+            name={'Station 6'}
+          />
         </div>
-        <div className='station-text'>
-          <div>Station 7</div>
-          <div></div>
+        <div id='Station 7' className='station-grid'>
+          <Station name={'Station 7'} />
         </div>
-        <div id='Station 1' className='missile-grid'></div>
-        <div id='Station 2' className='missile-grid'>
-          <Station weapon={'R-2'} isSelected={true} />
-          <Station weapon={'R-9E'} isSelected={true} />
-        </div>
-        <div id='Station 3' className='missile-grid'>
-          <Station weapon={'GBU12'} isSelected={false} />
-        </div>
-        <div id='Station 5' className='missile-grid'>
-          <Station weapon={'GBU38'} isSelected={false} />
-        </div>
-        <div id='Station 6' className='missile-grid'>
-          <Station weapon={'R-2'} isSelected={true} />
-          <Station weapon={'R-9E'} isSelected={false} />
-        </div>
-        <div id='Station 7' className='missile-grid'></div>
       </div>
-      <div className='body'></div>
-      <div className='footer'></div>
+      <div className='body-header'>
+        <div className='status-lights'>
+          <div className='station-selected'></div>
+          <div className='status-lights-text'>LNK</div>
+        </div>
+        <div className='status-lights'>
+          <div className='station-selected'></div>
+          <div className='status-lights-text'>STS</div>
+        </div>
+        <div>Air to Ground: Launch Status</div>
+      </div>
+      <div className='body'>
+        <div className='left-side-body'>
+          <button>Select Store</button>
+          <button>Store Setting</button>
+          <button>Select Target</button>
+          <button>Release Settings</button>
+          <button>Launch Status</button>
+        </div>
+        <div className='right-side-body'></div>
+      </div>
+
+      <div className='footer'>
+        <button>Air-Ground</button>
+        <button>Profiles</button>
+        <button>Status</button>
+        <button>Selective Jettison</button>
+        <button>Inventory</button>
+      </div>
     </div>
   );
 };

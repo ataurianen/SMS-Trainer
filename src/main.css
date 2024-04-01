@@ -1,11 +1,18 @@
+.container {
+  width: 900px;
+  height: 630px;
+  background-color: black;
+}
 .header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 40px);
-  border-bottom: 3px solid gray;
-  background-color: black;
+  grid-template-rows: 140px;
+  border-bottom: 2px solid white;
 }
-
+.station-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
 .station-text {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -22,18 +29,18 @@
 
 .station {
   display: grid;
-  grid-template-columns: 10px 1fr 1fr;
+  grid-template-columns: 15px 3fr 2fr;
   border: 1px solid white;
 }
 
 .station-selected {
   background-color: green;
-  border: 1.5px solid black;
+  border: 2px solid black;
 }
 
 .station-not-selected {
   background-color: black;
-  border: 1.5px solid black;
+  border: 2px solid black;
 }
 
 .station-ready {
@@ -42,4 +49,46 @@
 
 .station-missile-text {
   color: white;
+}
+
+.body-header {
+  display: grid;
+  grid-template-columns: 70px 70px 1fr;
+  grid-template-rows: 25px;
+  color: white;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+.status-lights {
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.status-lights-text {
+  border-left: 2px solid white;
+}
+
+/*body */
+
+.body {
+  display: grid;
+  height: 420px;
+  grid-template-columns: 140px 1fr;
+}
+
+.left-side-body {
+  border-right: 2px solid white;
+}
+
+/* Footer */
+
+.footer {
+  display: grid;
+  height: 55px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 55px;
+  background-color: gray;
 }
